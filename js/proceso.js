@@ -44,7 +44,9 @@ function init(){
         contenido += "<h1 class=\"intentos\">¡NOTABLE! Lo ha adivinado antes de los 4 intentos</h1>\n";
     }else if((i) < 11){
         contenido += "<h1 class=\"intentos\">¡MUY BIEN! Lo ha adivinado antes de los 11 intentos</h1>\n";
-    }else if((i) > 25){
+    }else if((i) < 25){
+        contenido += "<h1 class=\"intentos\">Regular! Lo ha adivinado antes de los 25 intentos</h1>\n";
+    }else if((i) >= 25){
         contenido += "<h1 class=\"intentos\">¡PESIMO! Lo ha adivinado despues de los 25 intentos</h1>\n";
     }
     contenido += "<h1 class=\"ingresos\">Los Números que ha ingresado son:</h1>\n";
