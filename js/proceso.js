@@ -4,6 +4,7 @@ var min=1, max=100, cantidad=1;
 var ingresados;
 var i=0, prueba;
 var contenido;
+var esOno=0;
 
 
 function init(){
@@ -18,7 +19,15 @@ function init(){
        //    alert("hola "+prueba);
 
       do{
-        ingresados[i] = prompt("Adivine el numero:" , "");
+        do{
+            ingresados[i] = prompt("Adivine el numero:" , "");
+            if(isNaN(ingresados[i])){
+                esOno=1;
+            }else{
+                esOno=0;
+            }
+        }while(esOno!=0);
+
         if(ingresados[i] < prueba){
             alert("El numero que ingreso es menor a el numero aleatorio, pruebe con uno mas alto");
         }else if(ingresados[i] > prueba){
